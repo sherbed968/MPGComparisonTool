@@ -5,7 +5,12 @@ public class Main {
 
         Scanner scannerNumOfCars = new Scanner(System.in);
 
-        System.out.print("Enter Number of Cars to Compare: ");
+        System.out.print("Enter Cars to Compare: ");
+
+        while (!scannerNumOfCars.hasNextInt()) {
+            System.out.print("Please Enter a Value:  ");
+            scannerNumOfCars.next();
+        }
         int size = scannerNumOfCars.nextInt();
 
         System.out.print("Enter Cost Per Gallon: ");
@@ -31,10 +36,22 @@ public class Main {
             }
 
             System.out.print("Enter " + i + string + " Cars City MPG: ");
+            while (!scanner.hasNextFloat()) {
+                System.out.print("Please Enter a Valid Number For City MPG: ");
+                scanner.next();
+            }
             float city = scanner.nextFloat();
             System.out.print("Enter " + i + string + " Cars Highway MPG: ");
+            while (!scanner.hasNextFloat()) {
+                System.out.print("Please Enter a Valid Number For City MPG: ");
+                scanner.next();
+            }
             float highway = scanner.nextFloat();
             System.out.print("Enter " + i + string + " Cars Gallons Per Tank: ");
+            while (!scanner.hasNextFloat()) {
+                System.out.print("Please Enter a Valid Number For City MPG: ");
+                scanner.next();
+            }
             float gallons = scanner.nextFloat();
 
             car[i - 1] = new Car(city, highway, gallons, gasCost);
