@@ -2,22 +2,25 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
+        
         Scanner scannerNumOfCars = new Scanner(System.in);
 
+        //Get number of cars to compare
         System.out.print("Enter Cars to Compare: ");
-
         while (!scannerNumOfCars.hasNextInt()) {
             System.out.print("Please Enter a Value:  ");
             scannerNumOfCars.next();
         }
         int size = scannerNumOfCars.nextInt();
-
+        
+        //Get cost per gallon
         System.out.print("Enter Cost Per Gallon: ");
         float gasCost = scannerNumOfCars.nextFloat();
 
+        //Create car objects
         Car[] car = new Car[size];
 
+        //Prompt for each data point
         for (int i = 1; i < size + 1; i++) {
             Scanner scanner = new Scanner(System.in);  // Initialize each scanner
             String string;
