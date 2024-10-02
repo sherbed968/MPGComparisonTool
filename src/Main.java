@@ -6,12 +6,12 @@ public class Main {
         Scanner scannerNumOfCars = new Scanner(System.in);
 
         //Get number of cars to compare
-        System.out.print("Enter Cars to Compare: ");
-        while (!scannerNumOfCars.hasNextInt()) {
-            System.out.print("Please Enter a Value:  ");
-            scannerNumOfCars.next();
+        int size = 0;
+        while (size <= 0 || size > 4) {
+            System.out.print("Enter Up to 4 Cars to Compare: ");
+            size = isNumber(scannerNumOfCars);
         }
-        int size = scannerNumOfCars.nextInt();
+
         
         //Get cost per gallon
         System.out.print("Enter Cost Per Gallon: ");
@@ -66,5 +66,15 @@ public class Main {
             System.out.println("Average Cost Per Tank: $" + car[i].getCostPerTank());
             System.out.println();
         }
+    }
+
+    private static int isNumber(Scanner scanner) {
+
+        while (!scanner.hasNextInt()) {
+            System.out.println("Please enter a number from 1 to 4: ");
+            scanner.next();
+        }
+        int size = scanner.nextInt();
+        return size;
     }
 }
