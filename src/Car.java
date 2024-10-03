@@ -1,13 +1,11 @@
+import java.util.Scanner;
+
 class Car {
 
     private float city;
     private float highway;
     private float gallons;
     private float gasCost;
-
-    public Car() {
-
-    }
 
     public Car(float city, float highway, float gallons, float gasCost) {
         this.city = city;
