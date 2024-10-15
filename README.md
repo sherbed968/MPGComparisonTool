@@ -11,5 +11,5 @@ A command-line tool that allows users to compare the fuel efficiency and cost pe
 https://github.com/user-attachments/assets/970562da-604e-49b6-8928-1b6bc4746dbe
 
 **Future Enhancements**</br>
-- Graphical user interface (GUI) for easier comparison</br>
+- Web application interface for easier comparison</br>
 - Application Programming Interface (API) to fetch MPG information given individual models of vehicles</br>
